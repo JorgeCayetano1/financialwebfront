@@ -1,4 +1,5 @@
 # financialwebfront
+<<<<<<< HEAD
 
 ## Project setup
 ```
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+front financial by vue
+>>>>>>> aec4eb69ad7d90a31db275b656738d287fba3725
