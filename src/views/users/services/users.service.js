@@ -1,8 +1,10 @@
 /* eslint-disable */
 
-import { financialApi } from 'axios'
+import financialApi from 'axios'
 
-async function searchUsers(){
-    const data = await financialApi.get('​/api​/search-users')
-    return data
+class userService {
+    async searchUsers(){
+        return await financialApi.get('https://localhost:8081/api/search-users')
+    }
 }
+export default new userService()

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { financialApi } from 'axios'
+import FinancialApi from '@/views/users/services/users.service'
 
 export default {
     data(){
@@ -18,8 +18,7 @@ export default {
     },
     methods: {
         async searchUsers(){
-            const data = await financialApi.get('​/api​/search-users')
-            this.item = data
+          this.item = await FinancialApi.searchUsers()
         }
     }
 }
