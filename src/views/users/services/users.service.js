@@ -8,11 +8,11 @@ class userService {
     }
 
     async saveUsers(params){
-        return await financialApi.post(`https://localhost:8081/api/save-user/${params}`)
+        return await financialApi.post(`https://localhost:8081/api/save-user/`, params)
     }
 
-    async editUsers(id){
-        return await financialApi.get(`https://localhost:8081/api/edit-user/${id}`)
+    async editUsers(id, params){
+        return await financialApi.put(`https://localhost:8081/api/edit-user/${id}`, params)
     }
 
     async getUser(id){
@@ -20,7 +20,7 @@ class userService {
     }
 
     async deleteUser(id){
-        return await financialApi.get(`https://localhost:8081/api/delete-user/${id}`)
+        return await financialApi.delete(`https://localhost:8081/api/delete-user/${id}`)
     }
 }
 export default new userService()
